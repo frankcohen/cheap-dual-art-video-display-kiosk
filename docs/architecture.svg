@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 510" role="img" aria-label="Dual-screen installation architecture diagram">
+<rect width="1000" height="510" rx="22" fill="#0d1526"/>
+<g font-family="Arial,sans-serif" fill="#f5f8ff" text-anchor="middle">
+<text x="500" y="45" font-size="26" font-weight="bold">Cheap Dual Art Video Display Kiosk</text>
+<text x="500" y="76" font-size="15" fill="#a9bbd9">Raspberry Pi 5 · GStreamer · Wayland / labwc</text>
+<g fill="#203858" stroke="#79b7f4" stroke-width="2">
+<rect x="65" y="112" width="260" height="88" rx="13"/>
+<rect x="370" y="112" width="260" height="88" rx="13"/>
+<rect x="675" y="112" width="260" height="88" rx="13"/>
+<rect x="65" y="300" width="400" height="126" rx="13"/>
+<rect x="535" y="300" width="400" height="126" rx="13"/>
+</g>
+<text x="195" y="146" font-size="20" font-weight="bold">Left MP4</text>
+<text x="195" y="174" font-size="15">H.265 hardware decode</text>
+<text x="500" y="146" font-size="20" font-weight="bold">Right MP4</text>
+<text x="500" y="174" font-size="15">H.265 hardware decode</text>
+<text x="805" y="146" font-size="20" font-weight="bold">sounds.wav</text>
+<text x="805" y="174" font-size="15">Decode once · split stereo</text>
+<text x="265" y="340" font-size="21" font-weight="bold">Left HDMI Monitor</text>
+<text x="265" y="372" font-size="16">1920 × 1080 · fullscreen</text>
+<text x="265" y="398" font-size="15" fill="#bfe1ff">Video + stereo sound</text>
+<text x="735" y="340" font-size="21" font-weight="bold">Right HDMI Monitor</text>
+<text x="735" y="372" font-size="16">1920 × 1080 · fullscreen</text>
+<text x="735" y="398" font-size="15" fill="#bfe1ff">Video + stereo sound</text>
+</g>
+<g stroke="#ffca80" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M195 200 V250 H265 V297"/><path d="M500 200 V250 H735 V297"/>
+<path d="M805 200 V228 H265 V297" stroke-dasharray="9 7"/>
+<path d="M805 228 H735 V297" stroke-dasharray="9 7"/>
+</g>
+<g fill="#ffca80"><path d="M259 287 l6 12 6 -12"/><path d="M729 287 l6 12 6 -12"/></g>
+<text x="500" y="478" font-family="Arial,sans-serif" font-size="14" fill="#a9bbd9" text-anchor="middle">Solid lines: video · dashed lines: duplicated stereo audio · one shared looping pipeline</text>
+</svg>
