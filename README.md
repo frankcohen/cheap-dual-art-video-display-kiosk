@@ -2,16 +2,11 @@
 
 A low-cost Raspberry Pi 5 playback system for a two-monitor video artwork. Two independent, synchronized **H.265/HEVC** videos fill their respective monitors while a separate stereo WAV soundtrack plays through **both HDMI audio outputs**. The system loops continuously without player controls, title bars, or a visible mouse pointer.
 
-## Watch the Installation in Action
+## Watch the video demonstration
 
-See the complete dual-screen Raspberry Pi 5 video art kiosk running,
-including synchronized video playback and audio.
+[![Watch the dual-screen art kiosk demonstration on YouTube](docs/images/youtube-demo-thumbnail.jpg)](https://www.youtube.com/shorts/nlWHGXYWgRk)
 
-[![Watch the Dual-Screen Video Art Kiosk](https://img.youtube.com/vi/nlWHGXYWgRk/maxresdefault.jpg)](https://www.youtube.com/shorts/nlWHGXYWgRk)
-
-**[▶ Watch the video on YouTube](https://www.youtube.com/shorts/nlWHGXYWgRk)**
-
-Built for under $200, including both monitors.
+**[▶ Watch the demonstration on YouTube](https://www.youtube.com/shorts/nlWHGXYWgRk)**
 
 > **Project status:** This repository documents a configuration reported working on the installation Raspberry Pi in October 2026. It is tailored to that Pi's monitor arrangement, ALSA device numbering, and labwc configuration; it is not a universal plug-and-play player.
 
