@@ -465,6 +465,36 @@ ffmpeg -sseof -3 -i TestLeft_H265.mp4 -t 3 \
 
 This extracts a short clip for inspection without re-encoding; stream-copy cuts may start at a nearby keyframe rather than the exact requested timestamp.
 
+## Building this project with ChatGPT: prompts and iterations
+
+I used ChatGPT as a technical collaborator to design, troubleshoot, and document this kiosk. The project was developed iteratively: I tested each suggestion on the actual Raspberry Pi, reported the results and error messages, and refined the implementation until it worked. The prompts below **reconstruct the requests and troubleshooting questions** from that process; they are examples of the workflow, **not a verbatim transcript**.
+
+### 1. Define the installation
+
+> I need an inexpensive way to play two different videos simultaneously on two separate 1920 × 1080 monitors, with one soundtrack heard from both monitors. Can a Raspberry Pi 5 do this without a laptop, and can the whole installation cost less than $200?
+
+### 2. Choose a playback architecture
+
+> The Raspberry Pi runs Raspberry Pi OS with the labwc Wayland desktop. Help me build a Python player using GStreamer that opens two borderless fullscreen windows, places one on each monitor, and uses hardware H.265 decoding to keep CPU usage low.
+
+### 3. Make both HDMI audio outputs work
+
+> The videos are working, but I need a separate `sounds.wav` file to play through the speakers of **both** HDMI monitors at the same time. How can I use GStreamer and ALSA to duplicate the audio? Here are the pipeline errors I'm seeing: [paste logs].
+
+### 4. Fix display and playback problems
+
+> The video windows are appearing on the wrong screens / the bottom few lines have visual artifacts / the mouse pointer is visible. How do we use labwc window rules, GTK fullscreen, and GStreamer's GL transformation to fix these without changing the original videos?
+
+### 5. Run unattended, including without Wi-Fi
+
+> The two videos and soundtrack now play correctly. How can I make the kiosk start automatically when power is connected, restart the player if it crashes, and run without Wi-Fi, a keyboard, or a mouse?
+
+### 6. Make the project reproducible
+
+> Help me turn the working installation into a public GitHub project. Include a README with the hardware budget, setup commands, troubleshooting notes, test-video generation, a system diagram, and the code. License the software under GPL v3.
+
+**How to use these prompts:** Start with the requirements for your own artwork and hardware. Share the actual output of commands and error logs when something fails, and test each change on the device. The monitor names, ALSA device indices, media paths, and desktop configuration in this repository are specific to the reference installation and may need adjustment.
+
 ## Files in this repository
 
 ```text
